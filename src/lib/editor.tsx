@@ -1,4 +1,4 @@
-import { fabric } from 'fabric'
+import { fabric } from 'fabric-pure-browser'
 import { CIRCLE, RECTANGLE, LINE, TEXT, FILL, STROKE } from './defaultShapes'
 import { useEffect, useState } from 'react'
 

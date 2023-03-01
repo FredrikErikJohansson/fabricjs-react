@@ -11,11 +11,6 @@ export default defineConfig({
       insertTypesEntry: true
     })
   ],
-  resolve: {
-    alias: {
-      fabric: 'fabric-pure-browser'
-    }
-  },
   build: {
     lib: {
       entry: resolve(__dirname, 'src/lib/index.tsx'),
