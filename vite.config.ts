@@ -11,6 +11,11 @@ export default defineConfig({
       insertTypesEntry: true
     })
   ],
+  resolve: {
+    alias: {
+      fabric: 'fabric-pure-browser'
+    }
+  },
   build: {
     lib: {
       entry: resolve(__dirname, 'src/lib/index.tsx'),
@@ -18,7 +23,7 @@ export default defineConfig({
       fileName: (format) => `fabricjs-react.${format}.js`
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'fabric'],
+      external: ['react', 'react-dom', 'fabric-pure-browser'],
       output: {
         // Provide global variables to use in the UMD build
         // for externalized deps
