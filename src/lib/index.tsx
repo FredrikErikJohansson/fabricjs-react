@@ -14,7 +14,9 @@ const FabricJSCanvas = ({ className, onReady }: Props) => {
   const canvasEl = useRef(null)
   const canvasElParent = useRef<HTMLDivElement>(null)
   useEffect(() => {
-    const canvas = new fabric.Canvas(canvasEl.current)
+    const canvas = new fabric.Canvas(canvasEl.current, {
+      selection: false
+    })
     const setCurrentDimensions = () => {
       canvas.setHeight(canvasElParent.current?.clientHeight || 0)
       canvas.setWidth(canvasElParent.current?.clientWidth || 0)
